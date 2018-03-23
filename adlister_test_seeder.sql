@@ -1,6 +1,5 @@
 USE adlister_test_db;
 
-
 # Seed some users
 INSERT INTO users(email, password) VALUES
   ('benji@gmail.com', 'abc123'),
@@ -25,8 +24,6 @@ INSERT INTO users(email, password) VALUES
   ('bongo@yahoo.com', 'bongo');
 
 
-SELECT * FROM users;
-
 INSERT INTO categories (cat_name) VALUES
   ('Home'),
   ('Auto'),
@@ -36,7 +33,6 @@ INSERT INTO categories (cat_name) VALUES
   ('Travel'),
   ('Jobs');
 
-SELECT * FROM categories;
 
 # ADS
 INSERT INTO ads (users_id, title, description, price) VALUES
@@ -53,17 +49,6 @@ INSERT INTO ads (users_id, title, description, price) VALUES
   (3, 'Banana Friends', 'We make banana posters that are all salmon colored', 147.78),
   (20, 'ASUS Laptop', 'Not actually an asus laptop, but that\'s cool right? It has an asus sticker', 700.99),
   (9, 'Welder Needed', 'Need experienced titanium welder fast. BOOKU Bucks to be made', NULL);
-
-
-SELECT * FROM ads;
-
-# ('Home'),
-# ('Auto'),
-# ('Personal'),
-# ('Services'),
-# ('Marketing'),
-# ('Travel'),
-# ('Jobs');
 
 INSERT INTO ads_categories (ad_id, cat_id) VALUES
   (1, 3),
@@ -89,9 +74,6 @@ INSERT INTO ads_categories (ad_id, cat_id) VALUES
   (12, 3),
   (13, 7);
 
-SELECT *
-FROM ads_categories;
-
 INSERT INTO media (ad_id, media) VALUES
   (1, '/cookies.jpeg'),
   (2, '/laptoppicture.jpeg'),
@@ -110,6 +92,3 @@ INSERT INTO media (ad_id, media) VALUES
   (10, '/man_in_cat_costume_holding_cat.jpeg'),
   (11, '/banana_logo_pic.png'),
   (12, '/laptop_asus.png');
-
-
-SELECT * FROM media;
