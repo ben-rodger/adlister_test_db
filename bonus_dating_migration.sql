@@ -1,9 +1,9 @@
 use dating_db;
 
 
-DROP TABLE IF EXISTS users_interests;
-DROP TABLE IF EXISTS interests;
 DROP TABLE IF EXISTS media;
+DROP TABLE IF EXISTS user_interest;
+DROP TABLE IF EXISTS interests;
 DROP TABLE IF EXISTS user_profiles;
 DROP TABLE IF EXISTS user_matches;
 DROP TABLE IF EXISTS user_attributes;
@@ -66,7 +66,7 @@ CREATE TABLE interests (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE users_interests(
+CREATE TABLE user_interest(
   interest_id	INT UNSIGNED NOT NULL,
   user_id	INT UNSIGNED NOT NULL,
   FOREIGN KEY (interest_id) REFERENCES interests(id),

@@ -1,9 +1,9 @@
 use adlister_test_db;
 
-DROP TABLE IF EXISTS ads_categories;
-DROP TABLE IF EXISTS media;
-DROP TABLE IF EXISTS ads;
+DROP TABLE IF EXISTS ad_category;
+DROP TABLE IF EXISTS medias;
 DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
 
 
@@ -24,7 +24,7 @@ CREATE TABLE ads (
   FOREIGN KEY (users_id) REFERENCES users(id)
 );
 
-CREATE TABLE media (
+CREATE TABLE medias (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   ad_id INT UNSIGNED NOT NULL,
   media TEXT NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE categories (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE ads_categories (
+CREATE TABLE ad_category (
   ad_id INT UNSIGNED NOT NULL ,
   cat_id INT UNSIGNED NOT NULL ,
   FOREIGN KEY (ad_id) REFERENCES ads(id),

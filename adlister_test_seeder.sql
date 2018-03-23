@@ -50,7 +50,7 @@ INSERT INTO ads (users_id, title, description, price) VALUES
   (20, 'ASUS Laptop', 'Not actually an asus laptop, but that\'s cool right? It has an asus sticker', 700.99),
   (9, 'Welder Needed', 'Need experienced titanium welder fast. BOOKU Bucks to be made', NULL);
 
-INSERT INTO ads_categories (ad_id, cat_id) VALUES
+INSERT INTO ad_category (ad_id, cat_id) VALUES
   (1, 3),
   (1, 4),
   (2, 3),
@@ -74,7 +74,7 @@ INSERT INTO ads_categories (ad_id, cat_id) VALUES
   (12, 3),
   (13, 7);
 
-INSERT INTO media (ad_id, media) VALUES
+INSERT INTO medias (ad_id, media) VALUES
   (1, '/cookies.jpeg'),
   (2, '/laptoppicture.jpeg'),
   (3, '/SICK_CAR_BRO.jpeg'),

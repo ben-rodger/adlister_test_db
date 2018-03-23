@@ -87,7 +87,7 @@ INSERT INTO interests(interest_name) VALUES
   ('Fantasy');
 
 # Add users-interests
-INSERT INTO users_interests(interest_id, user_id) VALUES
+INSERT INTO user_interest(interest_id, user_id) VALUES
   (1, 1),
   (5, 1),
   (6, 1),
